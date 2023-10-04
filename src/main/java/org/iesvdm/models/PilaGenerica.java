@@ -16,6 +16,17 @@ public  class PilaGenerica<T> {
 
     }
 
+    // Getters y Setters
+
+    public LinkedList<T> getList() {
+        return list;
+    }
+
+    public void setList(LinkedList<T> list) {
+        this.list = list;
+    }
+
+
     // Metodos
 
     public boolean estaVacia(){
@@ -45,7 +56,7 @@ public  class PilaGenerica<T> {
     @Override
     public String toString() {
 
-        return "pilaGenerica{" + list + '}';
+        return "pila = " + list;
 
     }
 }
