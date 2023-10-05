@@ -13,14 +13,14 @@ public class PilaGenericaTest {
     @BeforeEach
     void setUp(){
 
-         pilaInt = new PilaGenerica<>();
-         pilaString = new PilaGenerica<>();
-         pilaFloat = new PilaGenerica<>();
+        this.pilaInt = new PilaGenerica<>();
+        this.pilaString = new PilaGenerica<>();
+        this.pilaFloat = new PilaGenerica<>();
 
     }
 
     @Test
-    void testAñadirElemento(){
+    void añadirElementoTest(){
 
         Integer elemento = 1;
 
@@ -31,7 +31,7 @@ public class PilaGenericaTest {
     }
 
     @Test
-    void testEstaVacia(){
+    void estaVaciaTest(){
 
         // Confirmar que la pila esta vacia
         Assertions.assertTrue(pilaString.estaVacia());
@@ -39,7 +39,7 @@ public class PilaGenericaTest {
     }
 
     @Test
-    void testExtraer(){
+    void extraerTest(){
 
         // Elementos
         Float e1 = 1.3f;
@@ -60,7 +60,7 @@ public class PilaGenericaTest {
     }
 
     @Test
-    void testPrimero(){
+    void primeroTest(){
 
         // Elementos
         String e1  = "hola";
@@ -75,7 +75,7 @@ public class PilaGenericaTest {
     }
 
     @Test
-    void testToString(){
+    void toStringTest(){
 
         // Cadena esperada
         String cadena = "pila = [1, 2]";

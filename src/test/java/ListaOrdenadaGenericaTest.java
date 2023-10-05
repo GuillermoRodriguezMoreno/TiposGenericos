@@ -11,9 +11,9 @@ public class ListaOrdenadaGenericaTest {
     @BeforeEach
     public void setUp(){
 
-        listaStr = new ListaOrdenadaGenerica<>();
-        listaInt = new ListaOrdenadaGenerica<>();
-        listFloat = new ListaOrdenadaGenerica<>();
+        this.listaStr = new ListaOrdenadaGenerica<>();
+        this.listaInt = new ListaOrdenadaGenerica<>();
+        this.listFloat = new ListaOrdenadaGenerica<>();
 
     }
 

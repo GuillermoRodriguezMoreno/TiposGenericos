@@ -12,14 +12,14 @@ public class MatrizGenericaTest {
     @BeforeEach
     void setUp(){
 
-        tablaStr = new MatrizGenerica<String>(2, 3);
-        tablaInt = new MatrizGenerica<Integer>(3, 2);
-        tablaFloat = new MatrizGenerica<Float>(2, 2);
+        this.tablaStr = new MatrizGenerica<String>(2, 3);
+        this.tablaInt = new MatrizGenerica<Integer>(3, 2);
+        this.tablaFloat = new MatrizGenerica<Float>(2, 2);
 
     }
 
     @Test
-    void testConstructor(){
+    void constructorTest(){
 
         int numFilas = 3;
         int numCol = 2;
@@ -40,7 +40,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-    void testSet(){
+    void setTest(){
 
         String elemento = "hola";
         int posicionFila = 0;
@@ -58,7 +58,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-    void testGet(){
+    void getTest(){
 
         String elemento = "hola";
         String elementoObtenido = "";
@@ -77,7 +77,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-    void testColumnas(){
+    void columnasTest(){
 
         // cast
         Object[][] matriz = tablaFloat.getMatriz();
@@ -91,7 +91,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-    void testFilas(){
+    void filasTest(){
 
         // cast
         Object[][] matriz = tablaStr.getMatriz();
@@ -105,7 +105,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-     public void testToString(){
+     public void toStringTest(){
 
         // Añado elementos
         tablaFloat.set(0, 0, 1.1f);
@@ -119,7 +119,5 @@ public class MatrizGenericaTest {
         Assertions.assertEquals(esperada, tablaFloat.toString());
 
     }
-
-
 
 }
