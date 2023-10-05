@@ -2,6 +2,12 @@
 import org.iesvdm.models.ListaOrdenadaGenerica;
 import org.junit.jupiter.api.*;
 
+/**
+ * Conjunto de test unitarios realizados
+ * a la clase ListaOrdenadaGenerica,
+ * Se ha utilizado la biblioteca jUnit5
+ * @author guillermorodriguez
+ */
 public class ListaOrdenadaGenericaTest {
 
     ListaOrdenadaGenerica<String> listaStr;

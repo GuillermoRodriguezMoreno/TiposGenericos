@@ -3,6 +3,12 @@ import org.iesvdm.models.MatrizGenerica;
 import org.junit.Assert;
 import org.junit.jupiter.api.*;
 
+/**
+ * Conjunto de test unitarios realizados
+ * a la clase MatrizGenerica, Se ha utilizado
+ * la biblioteca jUnit5
+ * @author guillermorodriguez
+ */
 public class MatrizGenericaTest {
 
     MatrizGenerica<String> tablaStr;

@@ -4,6 +4,11 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Nos permite instanciar una tabla
+ * de tipo generico
+ * @param <T> tipo generico
+ */
 public class MatrizGenerica<T> {
 
     // Atributos
@@ -26,6 +31,13 @@ public class MatrizGenerica<T> {
 
     // Metodos
 
+    /**
+     * Inserta un elemento en la posicion dada,
+     * el valor anterior se sobreescribe
+     * @param fila Posicion en la fila
+     * @param col Posicion en la columna
+     * @param elemento Elemento a insertar
+     */
     public void set(int fila, int col, T elemento){
 
         // Control tamaño
@@ -43,6 +55,12 @@ public class MatrizGenerica<T> {
 
     }
 
+    /**
+     * Devuelve el elemento situado en la posicion dada
+     * @param fila Posicion en la fila
+     * @param col Posicion en la columna
+     * @return Elemento
+     */
     public T get(int fila, int col){
 
         // control tamaño
@@ -60,12 +78,20 @@ public class MatrizGenerica<T> {
 
     }
 
+    /**
+     * Devuelve el numero de filas totales
+     * @return int
+     */
     public int filas(){
 
         return this.matriz.length;
 
     }
 
+    /**
+     * Devuelve el numero de columnas totales
+     * @return int
+     */
     public int columnas(){
 
         return this.matriz[0].length;

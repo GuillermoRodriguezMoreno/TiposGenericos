@@ -2,6 +2,12 @@
 import org.iesvdm.models.PilaGenerica;
 import org.junit.jupiter.api.*;
 
+/**
+ * Conjunto de test unitarios realizados
+ * a la clase PilaGenerica, Se ha utilizado
+ * la biblioteca jUnit5
+ * @author guillermorodriguez
+ */
 public class PilaGenericaTest {
 
     // Seteo varios tipos de pila
