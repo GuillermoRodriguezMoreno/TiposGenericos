@@ -1,5 +1,6 @@
 package org.iesvdm;
 
+import org.iesvdm.models.ListaOrdenadaGenerica;
 import org.iesvdm.models.MatrizGenerica;
 import org.iesvdm.models.PilaGenerica;
 
@@ -31,6 +32,16 @@ public class Main {
 
         MatrizGenerica<Integer> tabla2 = new MatrizGenerica<>(2, 2);
         System.out.println(tabla2);
+
+        // Lista ordenada
+
+        ListaOrdenadaGenerica<Integer> listaInt = new ListaOrdenadaGenerica<>();
+
+        listaInt.add(2);
+        listaInt.add(1);
+        listaInt.add(3);
+
+        System.out.println(listaInt);
 
     }
 }

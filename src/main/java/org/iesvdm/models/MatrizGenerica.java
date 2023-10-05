@@ -77,7 +77,7 @@ public class MatrizGenerica<T> {
 
         String resultado = "";
 
-        for (int i = 0; i < this.matriz.length; i++) {
+        for(int i = 0; i < this.matriz.length; i++) {
 
             for (int j = 0; j < this.matriz[i].length; j++) {
 
@@ -85,7 +85,7 @@ public class MatrizGenerica<T> {
 
             }
 
-            resultado = resultado + " \n";
+            resultado = resultado.trim() + "\n";
 
         }
 

@@ -1,5 +1,6 @@
 
 import org.iesvdm.models.MatrizGenerica;
+import org.junit.Assert;
 import org.junit.jupiter.api.*;
 
 public class MatrizGenericaTest {
@@ -11,7 +12,7 @@ public class MatrizGenericaTest {
     @BeforeEach
     void setUp(){
 
-        tablaStr = new MatrizGenerica<String>(4, 4);
+        tablaStr = new MatrizGenerica<String>(2, 3);
         tablaInt = new MatrizGenerica<Integer>(3, 2);
         tablaFloat = new MatrizGenerica<Float>(2, 2);
 
@@ -23,12 +24,18 @@ public class MatrizGenericaTest {
         int numFilas = 3;
         int numCol = 2;
 
-        int filasTabla = tablaInt.getMatriz()[0].length;
+        // Casteo a Object para poder realizar el test
+
+        Object[][] aI = tablaInt.getMatriz();
+
+        int filasTabla = aI.length;
+        int colsTabla = aI[0].length;
+
         // La tabla contiene 3 filas
         Assertions.assertEquals(numFilas, filasTabla);
 
         // La tala contiene 2 columnas
-        //Assertions.assertEquals(numCol, tablaInt.getMatriz()[0][0].length);
+        Assertions.assertEquals(numCol, colsTabla);
 
     }
 
@@ -42,8 +49,11 @@ public class MatrizGenericaTest {
         // Insertar
         tablaStr.set(posicionFila, posicionCol, elemento);
 
+        // cast
+        Object[][] matriz = tablaStr.getMatriz();
+
         // El elemento se ha insertado en la posicion dada
-        Assertions.assertEquals(elemento, tablaStr.getMatriz()[posicionFila][posicionCol]);
+        Assertions.assertEquals(elemento, matriz[posicionFila][posicionCol]);
 
     }
 
@@ -52,7 +62,7 @@ public class MatrizGenericaTest {
 
         String elemento = "hola";
         String elementoObtenido = "";
-        int posicionFila = 2;
+        int posicionFila = 1;
         int posicionCol = 2;
 
         // Insertar
@@ -69,8 +79,11 @@ public class MatrizGenericaTest {
     @Test
     void testColumnas(){
 
+        // cast
+        Object[][] matriz = tablaFloat.getMatriz();
+
         // Obtengo numero columnas
-        int numCol = tablaFloat.getMatriz()[0].length;
+        int numCol = matriz[0].length;
 
         // El numero de columnas es el correcto
         Assertions.assertEquals(numCol, tablaFloat.columnas());
@@ -80,8 +93,11 @@ public class MatrizGenericaTest {
     @Test
     void testFilas(){
 
+        // cast
+        Object[][] matriz = tablaStr.getMatriz();
+
         // Obtengo numero de filas
-        int numFilas = tablaStr.getMatriz().length;
+        int numFilas = matriz.length;
 
         // El numero de filas es el correcto
         Assertions.assertEquals(numFilas, tablaStr.filas());
@@ -89,7 +105,7 @@ public class MatrizGenericaTest {
     }
 
     @Test
-    void testToString(){
+     public void testToString(){
 
         // Añado elementos
         tablaFloat.set(0, 0, 1.1f);
@@ -98,7 +114,7 @@ public class MatrizGenericaTest {
         tablaFloat.set(1, 1, 2.2f);
 
         // Cadena esperada
-        String esperada = "1.1 1.2 \n2.1 2.2 \n";
+        String esperada = "1.1 1.2\n2.1 2.2\n";
 
         Assertions.assertEquals(esperada, tablaFloat.toString());
 
