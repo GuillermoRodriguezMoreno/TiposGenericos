@@ -141,6 +141,16 @@ public class ListaOrdenadaGenericaTest {
     @Test
     public void toStringTest(){
 
+        // Añado elementos
+        listaInt.add(1);
+        listaInt.add(3);
+        listaInt.add(2);
+
+        // Cadena esperada
+        String esperada = "[1, 2, 3]";
+
+        // La cadena esperada y el toString deben ser iguales
+        Assertions.assertEquals(esperada, listaInt.toString());
 
     }
 }
