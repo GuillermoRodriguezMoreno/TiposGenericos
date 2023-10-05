@@ -1,5 +1,6 @@
 package org.iesvdm;
 
+import org.iesvdm.models.MatrizGenerica;
 import org.iesvdm.models.PilaGenerica;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -23,6 +24,13 @@ public class Main {
         System.out.println(pilaInt);
         System.out.println(pilaStr);
         System.out.println(pilaDbl);
+
+        MatrizGenerica<String> tabla = new MatrizGenerica<>(3, 2);
+
+        System.out.println(tabla);
+
+        MatrizGenerica<Integer> tabla2 = new MatrizGenerica<>(2, 2);
+        System.out.println(tabla2);
 
     }
 }
